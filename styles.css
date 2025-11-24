@@ -1,8 +1,135 @@
+/* 🏜️ FOND SABLE AVENTURIER — VERSION VINTAGE INTENSE */
 body {
-  background-color: #1a1a1a;
-  color: white;
+  margin: 0;
+  height: 100vh;
+  background-color: #f0cc6b;
+  background-image: radial-gradient(
+      circle at center,
+      rgba(240, 204, 107, 0.2) 55%,
+      rgba(0, 0, 0, 0.35) 100%
+    ),
+    url("https://www.transparenttextures.com/patterns/dust.png"),
+    url("https://www.transparenttextures.com/patterns/noise.png");
+  background-blend-mode: overlay, multiply, normal;
+  background-repeat: repeat;
+  background-size: auto, auto, cover;
+  color: rgb(76, 50, 8);
+  font-family: "Montez", cursive;
+  font-size: 22px; /* texte plus grand */
+  font-weight: 600;
+} /* ici la police s’appliquera *
+}
+
+/* Exemple de div centrée */
+div {
+  width: 1100px;
+  margin: 50px auto; /* centre horizontalement */
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffd154cd; /* ton sable de base */
+
+  background-image: url("https://www.transparenttextures.com/patterns/dust.png"),
+    url("https://www.transparenttextures.com/patterns/noise.png");
+  background-blend-mode: overlay, multiply;
+  background-repeat: repeat;
+  /* box-shadow corrigé */
+  box-shadow: 20px 10px 65px #4c3208;
+}
+
+/* 🎞️ Effet de grain animé ultra-léger */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/dust.png"),
+    url("https://www.transparenttextures.com/patterns/noise.png");
+  opacity: 0.9;
+  mix-blend-mode: multiply;
+  animation: grainMove 2s infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes grainMove {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-3px, 2px);
+  }
+}
+
+div::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/dust.png"),
+    url("https://www.transparenttextures.com/patterns/noise.png");
+  opacity: 1.9;
+  mix-blend-mode: multiply;
+  animation: grainMove 2s infinite alternate;
+  pointer-events: none;
 }
 
 a {
-  color: white;
+  text-decoration: none;
+  display: inline-block; /* pour pouvoir gérer padding et taille */
+  padding: 25px 40px; /* plus grand */
+  min-width: 250px;
+  background-color: #f0cc6b; /* couleur de fond */
+  color: #4c3208; /* couleur du texte */
+  /* supprime le soulignement du lien */
+
+  border-radius: 5px; /* coins arrondis */
+  font-family: "Cinzel Decorative", serif; /* police ancienne / Maya */
+  font-weight: 600; /* légèrement plus gras */
+  font-size: 30px; /* taille du texte */
+  transition: all 0.45s ease;
+  border-radius: 14px;
+  background: #f0cc6b;
+  box-shadow: inset 25px 25px 50px #ebb930, inset -25px -25px 50px #ffef7d;
+}
+
+a:hover {
+  border-radius: 38px;
+  background: #ff7700;
+  box-shadow: inset 25px 25px 50px #ffa200, inset -25px -25px 50px #ffff60;
+  cursor: pointer;
+  animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.08);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Appliquer l’animation */
+a {
+  animation: heartbeat 5s infinite;
+}
+
+img {
+  width: auto;
+  height: 600px; /* hauteur fixée */
+}
+
+ol {
+  text-align: left;
+}
+
+ul {
+  text-align: left;
 }
